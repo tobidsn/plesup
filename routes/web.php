@@ -11,13 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'IndexController@index')->name('index');
+Route::get('/about', 'IndexController@about')->name('about');
+Route::get('/search', 'IndexController@search')->name('search');
+Route::get('/tags', 'IndexController@tags')->name('tags');
+Route::get('/categories', 'IndexController@categories')->name('categories');
 
 Auth::routes();
 
